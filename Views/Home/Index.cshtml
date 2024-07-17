@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Luis C. Sepulveda - 200572241</p>
+</div>
+
+@model List<ReadDB.Models.YourModel>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.pid</td>
+                <td>@item.productname</td>
+            </tr>
+        }
+    </tbody>
+</table>
